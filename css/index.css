@@ -1,10 +1,81 @@
 body {
 	font-size: 16px;
 	margin: 0;
+	background: #343a40;
+	color: #25282b;
 }
 div {
 	box-sizing: border-box;
 }
 .head {
-	background: rgb(37, 37, 37);
+	background: #2c2e2f;
+	height: 54px;
+}
+a {
+	text-decoration: none;
+	color: aliceblue;
+}
+.Logo-Img {
+	margin: 6px auto 6px 8px;
+	border-radius: 24px;
+	width: 38px;
+	height: 38px;
+	cursor: pointer;
+	transition: 1s;
+	box-shadow: 0px 0px 0px #ffbb00;
+}
+.Logo-Img:hover {
+	box-shadow: 0px 0px 10px #ffbb00;
+}
+.Navigation {
+	height: calc(100vh - 54px);
+	float: left;
+	width: 150px;
+	background: #25282b;
+}
+.Navigation > ul > li > div > img {
+	vertical-align: middle;
+	filter: invert(30%);
+	width: 20px;
+	height: 20px;
+	margin-bottom: 2px;
+}
+.Navigation > ul , .Navigation li {
+	list-style: none;
+}
+.Navigation > ul {
+	margin: auto 0px auto 0px;
+	padding-left: 0px;
+}
+.Navigation > ul > li {
+	background-image: linear-gradient(to right, aliceblue , aliceblue , aliceblue , aliceblue , #25282b , #25282b , #25282b , #25282b);
+	background-size: 230%;
+	background-position: 100% 100%;
+	color: aliceblue;
+	transition: 1s;
+	height: 36px;
+}
+.Navigation > ul > li:hover {
+	color: #25282b;
+	background-position: 0% 0%;
+}
+.Navigation > ul > li > div {
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 6px;
+}
+.Navigation > div.NavEnd > hr {
+	width: 85%;
+	border: 0px;
+	height: 0px;
+	border-top: 1px solid aliceblue;
+}
+.Navigation > div.NavEnd {
+	padding-bottom: 0px;
+}
+/*----------------------------------------------------------------------------------------------------------------------导航*/
+.inner {
+	float: left;
+	width: calc(100% - 150px);
 }
