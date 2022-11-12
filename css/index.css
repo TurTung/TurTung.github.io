@@ -2,7 +2,7 @@ body {
 	font-size: 16px;
 	margin: 0;
 	background: #343a40;
-	color: #25282b;
+	color: rgb(255, 255, 255);
 }
 div {
 	box-sizing: border-box;
@@ -13,7 +13,7 @@ div {
 }
 a {
 	text-decoration: none;
-	color: aliceblue;
+	color: inherit;
 }
 .Logo-Img {
 	margin: 6px auto 6px 8px;
@@ -33,7 +33,7 @@ a {
 	width: 150px;
 	background: #25282b;
 }
-.Navigation > ul > li > div > img {
+.Navigation > ul > li > a > div > img {
 	vertical-align: middle;
 	filter: invert(30%);
 	width: 20px;
@@ -59,7 +59,7 @@ a {
 	color: #25282b;
 	background-position: 0% 0%;
 }
-.Navigation > ul > li > div {
+.Navigation > ul > li > a > div {
 	width: 100%;
 	text-align: center;
 	vertical-align: middle;
@@ -72,10 +72,34 @@ a {
 	border-top: 1px solid aliceblue;
 }
 .Navigation > div.NavEnd {
-	padding-bottom: 0px;
+	position: absolute;
+	bottom: 0px;
+	width: 150px;
 }
 /*----------------------------------------------------------------------------------------------------------------------导航*/
+.inner::-webkit-scrollbar {
+	width: 6px;
+}
+.inner::-webkit-scrollbar-button {
+	display: none;
+}
+.inner::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	background: #7b7d80;
+	transition: 1s;
+}
+.inner::-webkit-scrollbar-track {
+	background: #343a40;
+}
+.inner::-webkit-scrollbar-thumb:hover {
+	background: #666666;
+}
+
+
 .inner {
 	float: left;
 	width: calc(100% - 150px);
+	height: calc(100vh - 54px);
+	scroll-behavior:smooth;
+	overflow-x: hidden;
 }
