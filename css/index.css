@@ -57,13 +57,36 @@ div.inner div.banner .quotesSpan {
 	width: 75%;
 	height: 50%;
 	text-align: center;
-	color: #464646;
 	font-weight: bold;
 	font-size: 4vh;
 	font-family: "仿宋";
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 15%;
+	animation: quotesSpan 10s infinite;
+}
+@keyframes quotesSpan {
+	0% {
+		color: #ff6f6f;
+	}
+	16.66666% {
+		color: #ffe56f;
+	}
+	33.33333% {
+		color: #a4ff6f;
+	}
+	50% {
+		color: #6fffff;
+	}
+	66.66666% {
+		color: #6fb9ff;
+	}
+	83.33333% {
+		color: #7d6fff;
+	}
+	100% {
+		color: #ff6ff3;
+	}
 }
 .Navigation {
 	height: calc(100vh - 54px);
