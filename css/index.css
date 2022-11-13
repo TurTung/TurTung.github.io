@@ -48,8 +48,8 @@ a {
 	padding-left: 0px;
 }
 .Navigation > ul > li {
-	background-image: linear-gradient(to right, aliceblue , aliceblue , aliceblue , aliceblue , #25282b , #25282b , #25282b , #25282b);
-	background-size: 230%;
+	background-image: linear-gradient(45deg, aliceblue , aliceblue , aliceblue , aliceblue , #25282b , #25282b , #25282b , #25282b);
+	background-size: 260%;
 	background-position: 100% 100%;
 	color: aliceblue;
 	transition: 1s;
@@ -76,6 +76,28 @@ a {
 	position: absolute;
 	bottom: 0px;
 	width: 150px;
+}
+.Navigation > div.NavEnd > a > div {
+	width:100%;
+	text-align: center;
+	height: 30px;
+	cursor: pointer;
+}
+.Navigation > div.NavEnd > a > div:hover > img {
+	width: 24px;
+	height: 24px;
+	background: aliceblue;
+	filter: invert(70%);
+}
+.Navigation > div.NavEnd > a > div > img {
+	width: 20xp;
+	height: 20px;
+	filter: invert(30%);
+	vertical-align: middle;
+	margin-bottom: 2px;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0);
+	transition: 0.5s;
 }
 /*----------------------------------------------------------------------------------------------------------------------导航*/
 .inner::-webkit-scrollbar {

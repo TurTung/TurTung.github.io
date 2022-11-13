@@ -19,6 +19,12 @@ const Img = function () {
   for (let i = 0 ; i < NavLength; i++) {
     Nav[i].src = 'images/' + NavImg[i] + '.png';
   }
+  let NavEnd = document.querySelectorAll('.Navigation > div.NavEnd > a > div > img');
+  let NavEndImg = ['反馈','投稿','设置'];
+  let NavEndLength = NavEnd.length;
+  for (let i = 0 ; i < NavEndLength; i++) {
+    NavEnd[i].src = 'images/' + NavEndImg[i] + '.png';
+  }
   let banner = document.querySelector('.banner').style = 'background-image: linear-gradient(to top, rgba(52, 58, 64, 1), rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0)), url(images/banner.jpg)';
   return
 }
