@@ -3,6 +3,7 @@ let banner;
 const bannerTimeout = function() {
   clearTimeout(banner);
   banner = setTimeout(bannerWH , 50);
+  return
 }
 const bannerWH = function () {
   let bannerDiv = document.querySelector('.banner');
@@ -19,6 +20,7 @@ const Img = function () {
     Nav[i].src = 'images/' + NavImg[i] + '.png';
   }
   let banner = document.querySelector('.banner').style = 'background-image  :url("images/banner.jpg");';
+  return
 }
 window.onload = function() {
   Img();
