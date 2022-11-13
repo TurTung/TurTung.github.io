@@ -19,7 +19,7 @@ const Img = function () {
   for (let i = 0 ; i < NavLength; i++) {
     Nav[i].src = 'images/' + NavImg[i] + '.png';
   }
-  let banner = document.querySelector('.banner').style = 'background-image  :url("images/banner.jpg");';
+  let banner = document.querySelector('.banner').style = 'background-image: linear-gradient(to top, rgba(52, 58, 64, 1), rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0)), url(images/banner.jpg)';
   return
 }
 window.onload = function() {
