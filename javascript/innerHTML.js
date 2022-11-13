@@ -1,5 +1,6 @@
 "use strict";
 let banner;
+const quotes = document.querySelector('.quotesSpan');
 const bannerTimeout = function() {
   clearTimeout(banner);
   banner = setTimeout(bannerWH , 50);
@@ -28,7 +29,15 @@ const Img = function () {
   let banner = document.querySelector('.banner').style = 'background-image: linear-gradient(to top, rgba(52, 58, 64, 1), rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0)), url(images/banner.jpg)';
   return
 }
+const quotesSpan = function () {
+  let arr = ['静,不是耳旁无声,而是心里无争.'];
+  let arrLength = arr.length;
+  let num = Math.floor(Math.random() * arrLength );
+  quotes.innerHTML = '<span>' + arr[num] + '</span>';
+  return quotesSpan;
+}
 window.onload = function() {
+  setInterval(quotesSpan(),180000);
   Img();
   bannerWH();
   return;
