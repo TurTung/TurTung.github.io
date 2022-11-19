@@ -53,10 +53,19 @@ const quotesSpan = function () {
   quotes.innerHTML = '<span>' + arr[num] + '</span>';
   return quotesSpan;
 }
+const load = function () {
+  let BodyLoad = document.querySelector('.BodyLoad');
+  let framework = document.querySelector('#framework');
+  framework.id = 'GoFramework';
+  BodyLoad.innerHTML = '';
+  BodyLoad.style.display = 'none';
+  return;
+}
 window.onload = function() {
   Img();
   bannerWH();
   setInterval(quotesSpan(),180000);
+  load();
   return;
 };
 window.onresize = function() {
