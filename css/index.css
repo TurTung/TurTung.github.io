@@ -69,8 +69,6 @@ body {
 .line-5 {
 	animation-name: line-move-5;
 }
-
-/* 对称的动画要相同高度,这样看出心形了 */
 @keyframes line-move-1 {
 
 	0%,
@@ -185,13 +183,52 @@ a {
 	display: block;
 }
 div.head > div.title {
-	width: calc(100% - 50px);
+	/* width: calc(100% - 50px); */
 	text-align: left;
 	vertical-align: middle;
 	float: left;
 	animation: title 5s infinite;
 	cursor: default;
 }
+div.head > div.headRight {
+	float: right;
+	height: 54px;
+}
+div.headRight > div {
+	height: 30px;
+	align-items: center;
+	/* margin-top: 12px;
+	margin-bottom: 12px; */
+	margin: 12px 0px 12px 5px;
+}
+div.headRight > div > img {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	float: left;
+	overflow: hidden;
+}
+div.headRight > div {
+	width: 30px;
+	float: left;
+	transition: 0.5s;
+	overflow: hidden;
+}
+div.headRight > div > div.span {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	height: 24px;
+	overflow: hidden;
+	transition: 0.5s;
+	transform: scaleX(0);
+}
+div.headRight > div:hover {
+	width: 95px;
+}
+div.headRight > div:hover > div.span {
+	transform: scaleX(1);
+}
+/*------------------------------------------------------------------------------------------------*/
 @keyframes title {
 	0% {
 		color: #fbff01;
@@ -323,7 +360,7 @@ div.inner div.banner .quotesSpan {
 	margin-left: 20px;
 }
 .Navigation > div.NavEnd > a > div > img {
-	width: 20xp;
+	width: 20px;
 	height: 20px;
 	filter: invert(30%);
 	vertical-align: middle;

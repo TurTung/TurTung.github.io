@@ -15,7 +15,7 @@ const bannerWH = function () {
 const Img = function () {
   let logo = document.querySelector('.Logo-Img').src = 'images/logo.jpg';
   let Nav = document.querySelectorAll('.Navigation > ul > li > a > div > img');
-  let NavImg = ['主页','主页','主页']
+  let NavImg = ['主页','官网','书籍','消磨']
   let NavLength = Nav.length;
   for (let i = 0 ; i < NavLength; i++) {
     Nav[i].src = 'images/' + NavImg[i] + '.png';
@@ -25,6 +25,12 @@ const Img = function () {
   let NavEndLength = NavEnd.length;
   for (let i = 0 ; i < NavEndLength; i++) {
     NavEnd[i].src = 'images/' + NavEndImg[i] + '.png';
+  }
+  let HeadRight = document.querySelectorAll('.headRight > div > img');
+  let HeadRightImg = ['说明','通知','分享'];
+  let HeadRightLength = HeadRight.length;
+  for (let i = 0 ; i < HeadRightLength; i++) {
+    HeadRight[i].src = 'images/' + HeadRightImg[i] + '.png';
   }
   let banner = document.querySelector('.banner').style = 'background-image: linear-gradient(to top, rgba(52, 58, 64, 1), rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0)), url(images/banner.jpg)';
   return
