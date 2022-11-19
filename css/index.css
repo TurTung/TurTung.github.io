@@ -361,11 +361,9 @@ div.inner div.banner .quotesSpan {
 	top: 90%;
 	bottom: 10%;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 20px;
 	font-family: "仿宋";
 	animation: quotesSpan 10s infinite;
-	margin-left: 40%;
-	margin-right: 40%;
 }
 @keyframes quotesSpan {
 	0% {
@@ -416,21 +414,29 @@ div.inner div.banner .quotesSpan {
 	border-radius: 10px;
 	background: #798080;
 	display: block;
-	margin: 3px 0px 3px 5px;
+	margin: 15px 0px 3px 5px;
 }
 /*------------------------------------------------------------------------------------------------floor*/
 .classify {
 	list-style: none;
 	display: flex;
-	padding: 0px 0px 0px 5px;
+	padding: 0px 0px 0px 20px;
+	margin-top: 10px;
 }
 .classify > label > li {
+	border-radius: 13px;
+	text-align: center;
 	width: auto;
+	height: 29px;
+	background: #6fb9ff;
+	margin-right: 10px;
 }
 .classify > label > li > span {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	height: 21px;
 	display: block;
 	width: auto;
-	margin: 0px 5px 0px 5px;
 }
 .floor-L1 {
 	width: 100%;

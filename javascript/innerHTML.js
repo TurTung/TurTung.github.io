@@ -15,7 +15,7 @@ const bannerWH = function () {
 const Img = function () {
   let logo = document.querySelector('.Logo-Img').src = 'images/logo.jpg';
   let Nav = document.querySelectorAll('.Navigation > ul > li > a > div > img');
-  let NavImg = ['主页','官网','书籍','消磨']
+  let NavImg = ['主页','官网','档案','消磨']
   let NavLength = Nav.length;
   for (let i = 0 ; i < NavLength; i++) {
     Nav[i].src = 'images/' + NavImg[i] + '.png';
@@ -59,10 +59,19 @@ const quotesSpan = function () {
   quotes.innerHTML = '<span>' + arr[num] + '</span>';
   return quotesSpan;
 }
+function music() {
+  let musicFile = document.querySelector('#backgroundMusic');
+  musicFile.play();
+  setTimeout(() => {
+    musicFile.pause();
+    musicFile.load();
+  },10)
+}
 window.onload = function() {
   Img();
   bannerWH();
   setInterval(quotesSpan(),180000);
+  // music();
   return document.querySelector('.BodyLoad').innerHTML = '';
 };
 window.onresize = function() {
