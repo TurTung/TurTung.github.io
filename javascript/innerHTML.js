@@ -8,7 +8,7 @@ const bannerTimeout = function() {
 }
 const bannerWH = function () {
   let bannerDiv = document.querySelector('.banner');
-  let bannerW = bannerDiv.clientWidth;
+  let bannerW = bannerDiv.clientWidth || (document.querySelector('.BodyLoad').clientWidth) - 150;
   bannerDiv.style.height = ((bannerW / 6000) * 3375) + 'px';
   return
 }
@@ -59,20 +59,11 @@ const quotesSpan = function () {
   quotes.innerHTML = '<span>' + arr[num] + '</span>';
   return quotesSpan;
 }
-const load = function () {
-  let BodyLoad = document.querySelector('.BodyLoad');
-  let framework = document.querySelector('#framework');
-  framework.id = 'GoFramework';
-  BodyLoad.innerHTML = '';
-  BodyLoad.style.display = 'none';
-  return;
-}
 window.onload = function() {
   Img();
   bannerWH();
   setInterval(quotesSpan(),180000);
-  load();
-  return;
+  return document.querySelector('.BodyLoad').innerHTML = '';
 };
 window.onresize = function() {
   bannerTimeout();

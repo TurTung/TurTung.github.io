@@ -146,11 +146,11 @@ body {
 	}
 }
 /*-----------------------------------------------------------------------------------------------------------*/
-#framework {
+body:has(> div.BodyLoad:empty) > div.framework {
 	display: block;
 }
-#Goframework {
-	display: block;
+body:has(> div.BodyLoad > ul) > div.framework , body:has(> div.BodyLoad:empty) > div.BodyLoad {
+	display: none;
 }
 div {
 	box-sizing: border-box;
@@ -238,54 +238,6 @@ div.headRight > div:hover > div.span {
 	}
 	100% {
 		color: #fbff01;
-	}
-}
-div.inner div.banner .quotesSpan {
-	font-weight: bold;
-	font-size: 24px;
-	font-family: "仿宋";
-	float: left;
-	animation: quotesSpan 10s infinite;
-}
-@keyframes quotesSpan {
-	0% {
-		color: #ff6f6f;
-	}
-	8.33333% {
-		color: #ffe56f;
-	}
-	16.66666% {
-		color: #a4ff6f;
-	}
-	25% {
-		color: #6fffff;
-	}
-	33.33333% {
-		color: #6fb9ff;
-	}
-	41.66666% {
-		color: #7d6fff;
-	}
-	50% {
-		color: #ff6ff3;
-	}
-	58.33333% {
-		color: #7d6fff;
-	}
-	66.66666% {
-		color: #6fb9ff;
-	}
-	75% {
-		color: #6fffff;
-	}
-	83.33333% {
-		color: #a4ff6f;
-	}
-	91.66666% {
-		color: #ffe56f;
-	}
-	100% {
-		color: #ff6f6f;
 	}
 }
 .Navigation {
@@ -396,15 +348,81 @@ div.inner div.banner .quotesSpan {
 	overflow-y: scroll;
 }
 .banner {
+	position: relative;
 	width: var(--width);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	--width: 100%;
 }
+div.inner div.banner .quotesSpan {
+	width: 100%;
+	height: 24px;
+	position: absolute;
+	top: 90%;
+	bottom: 10%;
+	font-weight: bold;
+	font-size: 24px;
+	font-family: "仿宋";
+	animation: quotesSpan 10s infinite;
+	margin-left: 40%;
+	margin-right: 40%;
+}
+@keyframes quotesSpan {
+	0% {
+		color: #ff6f6f;
+	}
+	8.33333% {
+		color: #ffe56f;
+	}
+	16.66666% {
+		color: #a4ff6f;
+	}
+	25% {
+		color: #6fffff;
+	}
+	33.33333% {
+		color: #6fb9ff;
+	}
+	41.66666% {
+		color: #7d6fff;
+	}
+	50% {
+		color: #ff6ff3;
+	}
+	58.33333% {
+		color: #7d6fff;
+	}
+	66.66666% {
+		color: #6fb9ff;
+	}
+	75% {
+		color: #6fffff;
+	}
+	83.33333% {
+		color: #a4ff6f;
+	}
+	91.66666% {
+		color: #ffe56f;
+	}
+	100% {
+		color: #ff6f6f;
+	}
+}
+/*------------------------------------------------------------------------------------------------inner*/
+.inner > a {
+	width: 100px;
+	height: 23px;
+	text-align: center;
+	border-radius: 10px;
+	background: #798080;
+	display: block;
+	margin: 3px 0px 3px 5px;
+}
 /*------------------------------------------------------------------------------------------------floor*/
 .classify {
 	list-style: none;
 	display: flex;
+	padding: 0px 0px 0px 5px;
 }
 .classify > label > li {
 	width: auto;
@@ -418,7 +436,11 @@ div.inner div.banner .quotesSpan {
 	width: 100%;
 	background: #4db3c2;
 }
+.floor-L1 > input {
+	display: none;
+}
 .floor-L1 > input + div {
+	width: 100%;
 	display: none;
 }
 .floor-L1 > input:checked + div {
