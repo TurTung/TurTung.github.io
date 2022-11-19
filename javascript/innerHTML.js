@@ -71,7 +71,7 @@ window.onload = function() {
   Img();
   bannerWH();
   setInterval(quotesSpan(),180000);
-  // music();
+  // music()
   return document.querySelector('.BodyLoad').innerHTML = '';
 };
 window.onresize = function() {
