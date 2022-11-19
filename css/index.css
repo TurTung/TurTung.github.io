@@ -401,3 +401,26 @@ div.inner div.banner .quotesSpan {
 	background-size: 100%;
 	--width: 100%;
 }
+/*------------------------------------------------------------------------------------------------floor*/
+.classify {
+	list-style: none;
+	display: flex;
+}
+.classify > label > li {
+	width: auto;
+}
+.classify > label > li > span {
+	display: block;
+	width: auto;
+	margin: 0px 5px 0px 5px;
+}
+.floor-L1 {
+	width: 100%;
+	background: #4db3c2;
+}
+.floor-L1 > input + div {
+	display: none;
+}
+.floor-L1 > input:checked + div {
+	display: block;
+}
