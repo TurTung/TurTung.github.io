@@ -146,12 +146,27 @@ body {
 	}
 }
 /*-----------------------------------------------------------------------------------------------------------*/
-body:has(> div.BodyLoad:empty) > div.framework {
+.loading div , .load div.BodyLoad {
+	display: none;
+}
+.Loading div.BodyLoad {
+	display: block;
+}
+/* .Loading div {
+	display: none;
+}
+.Loading div.BodyLoad {
+	display: block;
+}
+.Load div.BodyLoad {
+	display: none;
+} */
+/* body:has(> div.BodyLoad:empty) > div.framework {
 	display: block;
 }
 body:has(> div.BodyLoad > ul) > div.framework , body:has(> div.BodyLoad:empty) > div.BodyLoad {
 	display: none;
-}
+} */
 div {
 	box-sizing: border-box;
 }
@@ -358,6 +373,7 @@ div.inner div.banner .quotesSpan {
 	width: 100%;
 	height: 24px;
 	position: absolute;
+	margin-left: 15px;
 	top: 90%;
 	bottom: 10%;
 	font-weight: bold;

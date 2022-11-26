@@ -57,7 +57,7 @@ const quotesSpan = function () {
   let arrLength = arr.length;
   let num = Math.floor(Math.random() * arrLength );
   quotes.innerHTML = '<span>' + arr[num] + '</span>';
-  return quotesSpan;
+  return;
 }
 function music() {
   let musicFile = document.querySelector('#backgroundMusic');
@@ -67,12 +67,17 @@ function music() {
     musicFile.load();
   },10)
 }
+let BodyLoad = function () {
+  document.querySelector('body').className = 'load';
+  return;
+}
 window.onload = function() {
   Img();
   bannerWH();
-  setInterval(quotesSpan(),180000);
+  quotesSpan();
   // music()
-  return document.querySelector('.BodyLoad').innerHTML = '';
+  BodyLoad();
+  return;
 };
 window.onresize = function() {
   bannerTimeout();
