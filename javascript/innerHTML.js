@@ -75,7 +75,6 @@ window.onload = function() {
   Img();
   bannerWH();
   quotesSpan();
-  // music()
   BodyLoad();
   return;
 };

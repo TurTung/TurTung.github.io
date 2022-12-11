@@ -455,17 +455,28 @@ div.inner div.banner .quotesSpan {
 	width: auto;
 }
 .floor-L1 {
+	min-height: 50px;
 	width: 100%;
-	background: #4db3c2;
+	background: #474f57;
 }
 .floor-L1 > input {
 	display: none;
 }
-.floor-L1 > input + div {
-	height: 200px;
+.floor-L1 > input + div.floor-L2 {
+	max-height: 250px;
+	min-height: 50px;
 	width: 100%;
 	display: none;
 }
-.floor-L1 > input:checked + div {
-	display: block;
+.floor-L1 > input:checked + div.floor-L2 {
+	display: flex;
+	flex-wrap: wrap;
+}
+.floor-L1 > input + div.floor-L2 > div {
+	list-style: none;
+	box-sizing: border-box;
+	width: 50px;
+	height: 80px;
+	margin: 10px;
+	padding: 0px;
 }
