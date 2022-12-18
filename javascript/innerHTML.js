@@ -12,28 +12,44 @@ const bannerWH = function () {
   bannerDiv.style.height = ((bannerW / 6000) * 3375) + 'px';
   return
 }
+// const Img_1 = function () {
+//   let logo = document.querySelector('.Logo-Img').src = 'images/logo.jpg';
+//   let Nav = document.querySelectorAll('.Navigation > ul > li > a > div > img');
+//   let NavImg = ['主页','官网','档案','消磨']
+//   let NavLength = Nav.length;
+//   for (let i = 0 ; i < NavLength; i++) {
+//     Nav[i].src = 'images/' + NavImg[i] + '.png';
+//   }
+//   let NavEnd = document.querySelectorAll('.Navigation > div.NavEnd > a > div > img');
+//   let NavEndImg = ['反馈','投稿','设置'];
+//   let NavEndLength = NavEnd.length;
+//   for (let i = 0 ; i < NavEndLength; i++) {
+//     NavEnd[i].src = 'images/' + NavEndImg[i] + '.png';
+//   }
+//   let HeadRight = document.querySelectorAll('.headRight > div > img');
+//   let HeadRightImg = ['说明','通知','分享'];
+//   let HeadRightLength = HeadRight.length;
+//   for (let i = 0 ; i < HeadRightLength; i++) {
+//     HeadRight[i].src = 'images/' + HeadRightImg[i] + '.png';
+//   }
+//   let banner = document.querySelector('.banner').style = 'background-image: linear-gradient(to top, rgba(52, 58, 64, 1), rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0)), url(images/banner.jpg)';
+//   return
+// }
 const Img = function () {
-  let logo = document.querySelector('.Logo-Img').src = 'images/logo.jpg';
-  let Nav = document.querySelectorAll('.Navigation > ul > li > a > div > img');
-  let NavImg = ['主页','官网','档案','消磨']
-  let NavLength = Nav.length;
-  for (let i = 0 ; i < NavLength; i++) {
-    Nav[i].src = 'images/' + NavImg[i] + '.png';
+  let Img = document.querySelectorAll('img');
+  let Img_Length = Img.length;
+  for ( let i = 0 ; i < Img_Length; i++ ) {
+    console.log(Img[i].alt + '---已加载')
+    Img[i].src = Img[i].alt;
   }
-  let NavEnd = document.querySelectorAll('.Navigation > div.NavEnd > a > div > img');
-  let NavEndImg = ['反馈','投稿','设置'];
-  let NavEndLength = NavEnd.length;
-  for (let i = 0 ; i < NavEndLength; i++) {
-    NavEnd[i].src = 'images/' + NavEndImg[i] + '.png';
+  return document.querySelector('.banner').style = 'background-image: linear-gradient(to top, rgba(52, 58, 64, 1), rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0)), url(images/banner.jpg)';
+}
+const ItemText = function () {
+  let Item = document.querySelectorAll('.item-text > span');
+  let ItemLength = Item.length;
+  for ( let i = 0 ; i < ItemLength ; i++ ) {
+    Item[i].title = Item[i].innerText;
   }
-  let HeadRight = document.querySelectorAll('.headRight > div > img');
-  let HeadRightImg = ['说明','通知','分享'];
-  let HeadRightLength = HeadRight.length;
-  for (let i = 0 ; i < HeadRightLength; i++) {
-    HeadRight[i].src = 'images/' + HeadRightImg[i] + '.png';
-  }
-  let banner = document.querySelector('.banner').style = 'background-image: linear-gradient(to top, rgba(52, 58, 64, 1), rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0)), url(images/banner.jpg)';
-  return
 }
 const quotesSpan = function () {
   let arr = ['静,不是耳旁无声,而是心里无争.',
@@ -75,6 +91,7 @@ window.onload = function() {
   Img();
   bannerWH();
   quotesSpan();
+  ItemText();
   BodyLoad();
   return;
 };
