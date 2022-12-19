@@ -1,157 +1,3 @@
-body {
-	font-size: 16px;
-	margin: 0;
-	background: #343a40;
-	color: rgb(255, 255, 255);
-}
-/*----------------------------------------------------------------------------------------------------加载动画*/
-.BodyLoad {
-	width: 100%;
-	height: 100vh;
-	z-index: 100;
-	background: #343a40;
-}
-@keyframes BodyLoadFlash {
-	0%,
-	100% {
-		filter: 0%;
-	}
-	50% {
-		filter: 100%;
-	}
-}
-.heart-loading {
-	margin-top: 120px;
-	width: 200px;
-	height: 200px;
-}
-.BodyLoad > ul {
-	transform-origin: 50% 100%;
-	animation: BodyLoadFlash 5s infinite;
-	list-style: none;
-	display: flex;
-	justify-content: space-between;
-	width: 150px;
-	height: 10px;
-	margin: 0px auto 0px auto;
-	padding-left: 0px;
-	padding: 20% 0px 0px 0px;
-}
-.BodyLoad li {
-	--count: 9;
-	--rgb: calc(var(--index) / var(--count) * .5turn);
-	--time: calc((var(--index) - 1) * 60ms);
-	border-radius: 5px;
-	width: 10px;
-	height: 10px;
-	background-color: #4db3c2;
-	filter: hue-rotate(var(--rgb));
-	animation-duration: 3s;
-	animation-delay: var(--time);
-	animation-iteration-count: infinite;
-}
-.line-1,
-.line-9 {
-	animation-name: line-move-1;
-}
-.line-2,
-.line-8 {
-	animation-name: line-move-2;
-}
-.line-3,
-.line-7 {
-	animation-name: line-move-3;
-}
-.line-4,
-.line-6 {
-	animation-name: line-move-4;
-}
-.line-5 {
-	animation-name: line-move-5;
-}
-@keyframes line-move-1 {
-
-	0%,
-	10%,
-	90%,
-	100% {
-			height: 10px;
-			border-radius: 2px;
-	}
-	45%,
-	55% {
-			height: 30px;
-			transform: translate3d(0, -15px, 0);
-			border-radius: 5px;
-	}
-}
-@keyframes line-move-2 {
-	0%,
-	10%,
-	90%,
-	100% {
-			height: 10px;
-			border-radius: 2px;
-	}
-	45%,
-	55% {
-			height: 60px;
-			transform: translate3d(0, -30px, 0);
-			border-radius: 5px;
-	}
-}
-@keyframes line-move-3 {
-	0%,
-	10%,
-	90%,
-	100% {
-			height: 10px;
-			border-radius: 2px;
-	}
-	45%,
-	55% {
-			height: 80px;
-			transform: translate3d(0, -40px, 0);
-			border-radius: 5px;
-	}
-}
-@keyframes line-move-4 {
-	0%,
-	10%,
-	90%,
-	100% {
-			height: 10px;
-			border-radius: 2px;
-	}
-	45%,
-	55% {
-			height: 90px;
-			transform: translate3d(0, -30px, 0);
-			border-radius: 5px;
-	}
-}
-@keyframes line-move-5 {
-	0%,
-	10%,
-	90%,
-	100% {
-			height: 10px;
-			border-radius: 2px;
-	}
-	45%,
-	55% {
-			height: 90px;
-			transform: translate3d(0, -20px, 0);
-			border-radius: 5px;
-	}
-}
-/*-----------------------------------------------------------------------------------------------------------*/
-body div.framework , body.load div.BodyLoad {
-	display: none;
-}
-body.load div.framework {
-	display: block;
-}
 div {
 	box-sizing: border-box;
 }
@@ -456,13 +302,24 @@ div.inner div.banner .quotesSpan {
 	display: flex;
 	flex-wrap: wrap;
 }
+.floor-L1 > input + div.floor-L2 > a {
+	display: block;
+	margin: 10px;
+	transition-duration: 0.3s;
+	box-shadow:0px 0px 2px grey;
+	border-radius: 24px;
+}
 .floor-L1 > input + div.floor-L2 > a > div {
 	width: 200px;
-	margin: 10px;
 	height: 64px;
-	border-radius: 8px;
+	border-radius: 24px;
 	background-color: #78797a;
 	--IconImg: 48px;
+}
+.floor-L1 > input + div.floor-L2 > a:hover {
+	margin-top: 13px;
+	margin-bottom: 7px;
+	box-shadow:0px 0px 5px grey;
 }
 div.floor-L2 > a > div > div.IconImg , div.floor-L2 > a > div > div.IconImg > img {
 	width: var(--IconImg);

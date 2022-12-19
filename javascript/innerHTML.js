@@ -75,15 +75,7 @@ const quotesSpan = function () {
   quotes.innerHTML = '<span>' + arr[num] + '</span>';
   return;
 }
-let BodyLoad = function () {
-  document.querySelector('body').className = 'load';
-  return;
-}
-window.onload = function() {
-  Img();bannerWH();quotesSpan();ItemText();
-  BodyLoad();
-  return;
-};
+Img();bannerWH();quotesSpan();ItemText();
 window.onresize = function() {
   bannerTimeout();
   return;
