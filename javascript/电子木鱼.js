@@ -20,7 +20,9 @@ const load = () => {
   let setting = [document.querySelector('#setting-title') , document.querySelector('#setting-num')]
   setting[0].value = ElectronicWoodFish.title;
   setting[1].value = ElectronicWoodFish.num;
+  return
 }
+load();
 window.onbeforeunload = function () {
   localStorage.setItem('ElectronicWoodFish' , JSON.stringify(ElectronicWoodFish));
   return
