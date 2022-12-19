@@ -293,8 +293,7 @@ div.inner div.banner .quotesSpan {
 	display: none;
 }
 .floor-L1 > input + div.floor-L2 {
-	max-height: 250px;
-	min-height: 50px;
+	min-height: 64px;
 	width: 100%;
 	display: none;
 }
