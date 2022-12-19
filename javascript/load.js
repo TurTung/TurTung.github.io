@@ -4,7 +4,7 @@ const BodyLoad = function () {
   return;
 }
 window.onload = function() {
-  load();
+  if(load) {load()};
   BodyLoad();
   return;
 };
