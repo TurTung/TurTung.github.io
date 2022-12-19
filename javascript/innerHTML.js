@@ -75,23 +75,12 @@ const quotesSpan = function () {
   quotes.innerHTML = '<span>' + arr[num] + '</span>';
   return;
 }
-function music() {
-  let musicFile = document.querySelector('#backgroundMusic');
-  musicFile.play();
-  setTimeout(() => {
-    musicFile.pause();
-    musicFile.load();
-  },10)
-}
 let BodyLoad = function () {
   document.querySelector('body').className = 'load';
   return;
 }
 window.onload = function() {
-  Img();
-  bannerWH();
-  quotesSpan();
-  ItemText();
+  Img();bannerWH();quotesSpan();ItemText();
   BodyLoad();
   return;
 };
