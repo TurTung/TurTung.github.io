@@ -23,24 +23,68 @@
     </ul>
   </div>
   <div class="framework">
-    <label for="setting">
-      <div class="setting" title="配置">
-        <img src="images/电子木鱼/设置.png" />
-      </div>
-    </label>
-    <input id="setting" type="checkbox" />
-    <div>
+    <div class="butAll">
+      <label for="setting">
+        <div class="setting" title="配置" onclick="input(this)">
+          <img src="images/电子木鱼/设置.png" />
+        </div>
+      </label>
+      <label for="auto">
+        <div class="auto" title="自动" onclick="input(this)">
+          <img src="images/电子木鱼/自动.png" />
+        </div>
+      </label>
+      <label for="reset">
+        <div class="reset" title="重置" onclick="input(this)">
+          <img src="images/电子木鱼/重置.png" />
+        </div>
+      </label>
+    </div>
+    <input name="item" id="setting" type="radio" />
+    <div class="settingItem">
       <span>
         替换文字
       </span>
-      <input id="setting-title" type="text" value="功德" />
+      <input id="setting-title" type="text" value="功德" maxlength="16" placeholder="功德" />
       <br />
       <span>
         数值
       </span>
-      <input id="setting-num" type="number" value="1" />
+      <input id="setting-num" type="number" value="1" placeholder="1" />
+      <br />
+      <input id="settingUp" type="button" value="保存" />
+    </div>
+    <input name="item" id="auto" type="radio" />
+    <div class="autoItem">
+      <span>
+        自动模式
+      </span>
+      <input id="autoSetting" type="checkbox" />
+      <br />
+      <span>
+        次间隔
+      </span>
+      <input type="number" value="1" />
+      <span>
+        ms
+      </span>
+      <br />
+      <spsn>
+        持续时间
+      </spsn>
+      <input type="number" value="-1" title="设置-1为不限时间" />
+      <span>
+        ms
+      </span>
       <br />
       <input type="button" value="保存" />
+    </div>
+    <input name="item" id="reset" type="radio" />
+    <div class="resetItem">
+      <span>
+        确定重置吗?
+      </span>
+      <input id="resetUp" type="button" value="确定" />
     </div>
     <div class="num">
       <strong class="num-title">

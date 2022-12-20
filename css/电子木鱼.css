@@ -2,31 +2,35 @@
   width: 100%;
   height: 100vh;
 }
-.setting {
-  margin-left: 10px;
-  margin-bottom: 10px;
-  bottom: 0px;
+.butAll {
+  display: flex;
   position: absolute;
+  border-radius: 5px;
+  left: 10px;
+  bottom: 10px;
+}
+.butAll > label > div {
   border-radius: 5px;
   border: 3px solid rgb(124, 124, 124);
   --width: 48px;
   width: var(--width);
   height: var(--width); 
+  margin-right: 10px;
 }
-.setting > img {
+.butAll > label > div > img {
   width: var(--width);
   height: var(--width);
 }
-#setting {
+input[name='item'] {
   display: none;
 }
-#setting + div {
+input[name='item'] + div {
   display: none;
   position: absolute;
   bottom: 70px;
   margin-left: 10px;
 }
-#setting:checked + div {
+input[name='item']:checked + div {
   display: block;
 }
 .num {
